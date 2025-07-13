@@ -1,0 +1,640 @@
+/* --- Загальний стиль тіла з фоном --- */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('image/garage.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+}
+
+/* Темний фільтр над фоном */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.5);
+  z-index: -1;
+}
+
+/* Хедер */
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 2rem;
+}
+
+/* --- Навігація --- */
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color:#FFDF00;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* --- Основні секції --- */
+section {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  backdrop-filter: blur(2px);
+}
+
+h2 {
+  color:#FFDF00;
+}
+
+/* --- Футер --- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ddd;
+}
+
+/* --- Адаптивність --- */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  section {
+    padding: 1.2rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    font-size: 0.95rem;
+  }
+}
+/* --- Переливання кольорами райдуги Rezervacia--- */
+.rainbow-link {
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: linear-gradient(
+    270deg,
+    red, orange, yellow, green, blue, indigo, violet, red
+  );
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: rainbowFlow 6s linear infinite;
+  text-decoration: none;
+}
+
+@keyframes rainbowFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* --- Переливання золотом для Назви--- */
+.golden-glow {
+  font-weight: bold;
+  font-size: 48px;
+  background: linear-gradient(
+    270deg,
+    #FFD700, #FFCC00, #FFB900,#FFDF00, #FF8C00, #FF7F00, #FF6A00, #FFD700
+  );
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: goldFlow 6s linear infinite;
+  text-decoration: none;
+}
+
+@keyframes goldFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+/* --- Модальне вікно з iframe --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  animation: slideDown 0.3s ease-out;
+}
+
+.close {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close:hover {
+  color: #ff5555;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+
+
+/* Стиль для иконок в разделе рабочих часов */
+.otvaracie-hodiny-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.otvaracie-hodiny-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.otvaracie-hodiny-list i {
+  font-size: 24px; /* Размер иконок */
+  margin-right: 10px; /* Отступ между иконкой и текстом */
+}
+
+/* Зеленая иконка для рабочих дней */
+.green-icon {
+  color: #4CAF50; /* Зеленый цвет */
+}
+
+/* Желтая иконка для субботы */
+.yellow-icon {
+  color: #FFEB3B; /* Желтый цвет */
+}
+
+/* Красная иконка для воскресенья */
+.red-icon {
+  color: #F44336; /* Красный цвет */
+}
+
+/* ---Фотоколаж */
+/* Галерея: всі фото в ряд, розмір 8x8 см */
+.photo-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.photo-gallery img {
+  width: 12.2cm;
+  height: 12.2cm;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Модальне вікно на весь екран */
+#photoModal.modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 40px; /* Ось цей відступ з усіх сторін */
+  box-sizing: border-box; /* Щоб padding не збільшував розмір */
+}
+
+#photoModal .modal-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#photoModal img#modalImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Закриття */
+#photoModal .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Стрілки */
+#photoModal .modal-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+#photoModal .modal-nav .prev,
+#photoModal .modal-nav .next {
+  font-size: 48px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+#photoModal .modal-nav .prev:hover,
+#photoModal .modal-nav .next:hover {
+  color: #ff5555;
+}
+@media (max-width: 768px) {
+  .photo-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .photo-gallery img {
+    width: 90vw;
+    height: auto;
+  }
+
+  #photoModal .modal-content {
+    padding: 10px;
+  }
+
+  #photoModal .close {
+    font-size: 28px;
+    top: 15px;
+    right: 20px;
+  }
+
+  #photoModal .modal-nav .prev,
+  #photoModal .modal-nav .next {
+    font-size: 36px;
+    padding: 8px;
+  }
+}
+/* Whatsapp як випадаючий*/
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color:#FFDF00;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  animation: fadeSlideUp 0.6s ease-out;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  background-color: #daff76;
+}
+
+.whatsapp-button img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+/* ---Кнопка на акції Гугл */
+  .info-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .info-button {
+    padding: 8px 16px;
+    background-color:#FFDF00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+  }
+    .info-button:hover {
+    opacity: 0.6; /* Прозорість при наведенні */
+  }
+
+/* Сервісний лист */
+.services-list {
+  font-size: 1.4rem;
+}
+
+/* Подзаголовок */
+.rainbow-underline {
+  color:#FFDF00;
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding: 0.4em 0;
+}
+
+.rainbow-underline::before,
+.rainbow-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px; /* тонші лінії */
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  border-radius: 2px;
+}
+
+.rainbow-underline::before {
+  top: 0;
+}
+
+.rainbow-underline::after {
+  bottom: 0;
+}
+/*РАМКИ*/
+/* Базові стилі навігації */
+nav.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+nav.nav-menu a {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 4px;
+  border: 2px solid#FFDF00;
+  border-radius: 8px;
+  color:#FFDF00;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  min-width: 120px;
+  text-align: center;
+}
+
+nav.nav-menu a:hover,
+nav.nav-menu a:focus,
+nav.nav-menu a:active {
+  background-color:#FFDF00;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px#FFDF00, 0 0 16px#FFDF00;
+}
+
+/* Бургер кнопка */
+#burger-btn {
+  display: none; /* ховаємо на десктопі */
+  font-size: 30px;
+  background: none;
+  border: none;
+  color:#FFDF00;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 600px) {
+  /* Показуємо кнопку */
+  #burger-btn {
+    display: block;
+  }
+
+  /* Приховуємо меню за замовчуванням */
+  nav.nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Якщо меню активне (відкрите) */
+  nav.nav-menu.active {
+    display: flex;
+  }
+
+  nav.nav-menu a {
+    width: 90%;
+    font-size: 18px;
+  }
+}
+  /* біля Бургеру */
+/* Ховаємо кнопку на десктопі */
+#mobile-reserve-link {
+  display: none;
+}
+
+/* Мобільне меню */
+@media (max-width: 600px) {
+  .mobile-header {
+    padding: 10px 15px;
+  }
+
+  .mobile-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  #burger-btn {
+    display: block;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color:#FFDF00;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+
+  /* Показуємо кнопку резервування з анімованим текстом */
+  #mobile-reserve-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 2px solid#FFDF00;
+    box-shadow: 0 0 10px#FFDF00, 0 0 20px#FFDF00;
+    text-decoration: none;
+    /* Застосовуємо перелив тексту */
+    background: linear-gradient(
+      270deg,
+      red, orange, yellow, green, blue, indigo, violet, red
+    );
+    background-size: 1000% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: rainbowFlow 6s linear infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #mobile-reserve-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px#FFDF00, 0 0 30px#FFDF00;
+    text-decoration: none;
+  }
+}
+
+@keyframes rainbowFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+    /* перемикання для фото на мобільному */
+.mobile-gallery-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px; /* максимум ширини картинки */
+}
+
+.mobile-gallery-wrapper img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.mobile-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 2px solid #8f908e;
+  color: #8f908e;
+  font-size: 2rem;
+  padding: 5px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #8f908e, 0 0 20px #8f908e;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.mobile-nav-btn:hover,
+.mobile-nav-btn:focus {
+  background-color: #8f908e;
+  color: black;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 0 15px #8f908e, 0 0 30px #8f908e;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+
+
+
+
+
+
+
+
