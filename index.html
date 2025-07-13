@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -283,3 +284,290 @@
   <script src="app.js"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAV Auto Service</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Підключення Font Awesome (у <head>) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1 class="golden-glow">
+  SAV<br>Auto Service
+</h1>
+
+    <p class="rainbow-underline">Váš spoľahlivý autoservis v meste!</p>
+
+  </header>
+  <div class="mobile-controls">
+  <button id="burger-btn" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  <a href="#rezervacia" id="mobile-reserve-link" class="rainbow-text-button" onclick="openModalOrNewTab(event)">Rezervácia</a>
+</div>
+
+  <nav id="nav-menu" class="nav-menu">
+    <a href="#services">Služby</a>
+    <a href="#akcia">Akcie</a>
+    <a href="#otvaracie-hodiny">Otváracie hodiny</a>
+    <a href="#about">O nás</a>
+    <a href="#cennik">Cennik</a>
+    <a href="#contact">Kontakt</a>
+    <a href="#" class="rainbow-link" onclick="openPopup(event)">Rezervácia</a>
+  </nav>
+
+<!-- Приховане посилання для мобільних -->
+<a id="mobileFormLink"
+    href="https://sites.google.com/view/info-sav-auto-service/akcie-a-z%C4%BEavy"
+    target="_blank"
+    style="display: none;"></a>
+
+
+<style>
+  #services {
+    width: 100vw; /* повна ширина вьюпорта */
+    padding: 20px 40px; /* відступи зверху/знизу і з боків */
+    box-sizing: border-box; /* щоб паддінги не виходили за межі */
+  }
+
+  #services > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .services-columns {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between; /* колонки рівномірно по ширині */
+  }
+
+  .service-block {
+    flex: 1; /* обидва блоки займають порівну */
+    min-width: 300px;
+  }
+
+  .service-block h3 {
+    margin-bottom: 15px;
+  }
+
+  .services-list {
+    list-style: disc inside;
+    padding-left: 0;
+  }
+</style>
+
+<section id="services">
+  <h2>Naše služby:</h2>
+
+  <div class="services-columns">
+    <div class="service-block">
+      <h3> Technické služby:</h3>
+      <ul class="services-list">
+        <li>Výmena oleja a všetkých technických kvapalín</li>
+        <li>Výmena oleja v motore s filtrami</li>
+        <li>Oprava podvozku, bŕzd a chladiaceho systému</li>
+        <li>Výfukový systém, pružné spojky, DPF, EGR</li>
+        <li>Výmena spojky</li>
+        <li>Výmena rozvodov (BMW, Mercedes, Range Rover a iné)</li>
+        <li>Servis automatických a manuálnych prevodoviek: DSG / DQ200 / DQ250 / DQ500</li>
+        <li>Výmena dvojspojkových prevodoviek</li>
+        <li>Doliatie oleja</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3> Starostlivosť o vzhľad vášho vozidla:</h3>
+      <ul class="services-list">
+        <li>Hĺbková chemická čistička interiéru</li>
+        <li>PDR – odstránenie preliačin без lakovania</li>
+        <li>Leštenie karosérie a svetlometov</li>
+        <li>Vlepenie nových skiel</li>
+        <li>Oprava škrabancov і prasklín на skle</li>
+        <li>Tónovanie skiel</li>
+        <li>Lokálne lakovanie</li>
+        <li>Oprava nárazníkov</li>
+        <li>… а mnoho ďalšieho!</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="akcia">
+  <h2>Aktuálne akcie a zľavy</h2>
+  <h1>Online rezervácia s odmenou – Zapojte sa do žrebovania o skvelé ceny!</h1>
+
+  <p><strong>📅 Rezervujte si online termín ešte dnes</strong> a získajte exkluzívnu možnosť zúčastniť sa každoročného <strong>žrebovania o hodnotné ceny</strong> pre vás a vaše auto.</p>
+
+  <h2>Prečo túto akciu robíme?</h2>
+  <p>Pretože <strong>zákaznícka spokojnosť a vernosť</strong> sú pre nás prioritou. Ako jedni z mála vám chceme ponúknuť viac než len <strong>kvalitné autoslužby</strong> – odmeňujeme vašu dôveru!</p>
+
+  <h2>Kto sa môže zapojiť?</h2>
+  <p>Táto exkluzívna ponuka platí <strong>pre všetkých zákazníkov, ktorí si vytvoria online rezerváciu</strong>. Či už ste nový zákazník alebo verný klient, každý má rovnakú šancu vyhrať!</p>
+
+  <h2>Čo môžete vyhrať?</h2>
+  <ul>
+    <li>Darčekové poukazy</li>
+    <li>Produkty a služby pre vaše auto</li>
+    <li>A mnoho ďalších prekvapení</li>
+  </ul>
+  <hr>
+
+  <footer>
+  <p>Rezervujte si svoj termín online a využite výhody nášho vernostného programu. Získajte šancu na žrebovanie o ceny a vychutnajte si kvalitné autoslužby s odmenou. Rezervácia auta online nikdy nebola jednoduchšia.</p>
+</footer>
+</section>
+
+<section id="otvaracie-hodiny">
+  <h2>Otváracie hodiny</h2>
+  <ul class="otvaracie-hodiny-list">
+    <li><i class="fas fa-calendar-day green-icon"></i> Pondelok – Piatok: od 9:00 do 17:00</li>
+    <li><i class="fas fa-calendar-week yellow-icon"></i> Sobota: podľa dohody / na objednávku</li>
+    <li><i class="fas fa-calendar-times red-icon"></i> Nedeľa: zatvorené</li>
+  </ul>
+</section>
+  
+  <section id="about">
+    <h2>O nás</h2>
+    <h2>🔧 Autoservis Bratislava – Spoľahlivý partner pre vaše auto</h2>
+  
+  <p>
+    Hľadáte kvalitný <strong>autoservis v Bratislave</strong>? Sme moderný servis, ktorý spája profesionalitu, vysokú kvalitu a čestný prístup. Náš skúsený tím mechanikov sa špecializuje na údržbu a opravy všetkých značiek a modelov automobilov.
+  </p>
+
+  <p>
+    Poskytujeme <strong>kompletné autoservisné služby v Bratislave</strong> – od počítačovej diagnostiky, výmeny oleja a filtrov, cez servis bŕzd, tlmičov, klimatizácií, až po náročné opravy motora a podvozku. Používame iba overené vybavenie a kvalitné náhradné diely, vďaka čomu zaručujeme dlhodobú spoľahlivosť a bezpečnosť vášho vozidla.
+  </p>
+
+  <h3>Prečo si vybrať práve náš autoservis v Bratislave?</h3>
+  <ul>
+    <li>✔️ Skúsení a školení mechanici</li>
+    <li>✔️ Férový a transparentný prístup</li>
+    <li>✔️ Rýchle termíny a dostupné ceny</li>
+    <li>✔️ Dôraz na kvalitu a spokojnosť zákazníka</li>
+  </ul>
+
+  <p>
+    Vyberte si náš <strong>autoservis</strong> a získajte spoľahlivého partnera, ktorý sa postará o vaše auto tak, akoby bolo jeho vlastné. 
+    <strong>Objednajte sa online</strong> a využite aj možnosť zapojiť sa do súťaže o atraktívne ceny!
+  </p>
+
+
+  <!-- Fotogaléria -->
+<div style="text-align: center;">
+  <h2 class="rainbow-underline">📸 Fotogaléria </h2>
+</div>
+
+
+  <!-- Галерея фото 8x8см у ряд -->
+  <div class="photo-gallery">
+  <img src="image/photo1.jpg" alt="Foto 1" onclick="openImageModal(0)" />
+  <img src="image/photo2.jpg" alt="Foto 2" onclick="openImageModal(1)" />
+  <img src="image/photo3.jpg" alt="Foto 3" onclick="openImageModal(2)" />
+  </div>
+
+  <!-- Модальне вікно для повноекранного фото -->
+  <div id="photoModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="Modal Image" />
+      <div class="modal-nav">
+        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="next" onclick="changeImage(1)">&#10095;</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="cennik">
+    <h2>Cennik</h2>
+  <h2>💶 Ceny služieb – Autoservis Bratislava</h2>
+  
+  <p>
+    V našom <strong>autoservise v Bratislave</strong> ponúkame <strong>najlepšie ceny</strong>, ktoré sú vždy <strong>primerané kvalite a náročnosti</strong> vykonanej práce. Rozumieme, že ceny sú dôležitým faktorom pri výbere správneho autoservisu, a preto sa vždy snažíme poskytovať našim zákazníkom <strong>ferové a transparentné cenové ponuky</strong>.
+  </p>
+
+  <h3>🛠️ Ako sa určujú naše ceny?</h3>
+  <p>
+    Ceny za naše služby závisia od <strong>náročnosti práce</strong>, <strong>potrebného vybavenia</strong> a <strong>kvality náhradných dielov</strong>. Niektoré opravy, ako výmena oleja alebo diagnostika, môžu byť cenovo dostupné, zatiaľ čo zložitejšie opravy, ako sú opravy motora alebo podvozku, si vyžadujú vyššie investície do času a materiálu.
+  </p>
+
+  <h3>⚙️ Čo zahrňuje cena našich služieb?</h3>
+  <ul>
+    <li><strong>Diagnostika a analýza závad</strong> – včasná identifikácia problémov vám môže ušetriť náklady na neskoršie opravy.</li>
+    <li><strong>Opravy a výmena dielov</strong> – používame len kvalitné náhradné diely, ktoré zaručujú <strong>dlhodobú spoľahlivosť</strong> a <strong>bezpečnosť</strong> vašich vozidiel.</li>
+    <li><strong>Pravidelná údržba</strong> – vyváženie bŕzd, kontrola tlmičov a iné drobné opravy sa vykonávajú za <strong>cenovo dostupné ceny</strong>, aby vaše vozidlo bolo vždy v perfektnom stave.</li>
+  </ul>
+
+  <h3> 🔧 Prečo si vybrať práve náš autoservis v Bratislave?</h3>
+  <ul>
+    <li>✔️ <strong>Adekvátne ceny</strong>, ktoré sú v súlade s <strong>kvalitou a odborným spracovaním</strong>.</li>
+    <li>✔️ <strong>Férový prístup</strong> a <strong>transparentnosť</strong> v cenových ponukách.</li>
+    <li>✔️ <strong>Rýchle termíny</strong> a <strong>pružnosť</strong> pri plánovaní opráv.</li>
+  </ul>
+  
+  <p>
+    Vyberte si náš <strong>autoservis</strong> a získajte spoľahlivého partnera, ktorý sa postará o vaše auto tak, akoby bolo jeho vlastné. <strong>Kontaktujte nás</strong> pre viac informácií o cenách alebo pre konkrétnu cenovú ponuku na mieru podľa vašich potrieb.
+  </p>
+</section>
+
+  <section id="contact">
+  <h2>Kontakt</h2>
+  <a href="https://www.google.com/maps?q=Bratislava,+Bellova+12031/2A" target="_blank" style="color: #FFF100; text-decoration: none;">
+    <i class="fas fa-map-marker-alt"style="color: yellow"></i>  Bratislava, Bellova 12031/2А
+  </a>
+
+  <p>
+    <i class="fas fa-phone"style="color: yellow"></i>
+    <a href="tel:+421950436151" style="color: #FFF100; text-decoration: none;">+421 95 043 6151</a>
+  </p>
+  <p>
+    <i class="fas fa-envelope"style="color: yellow"></i>
+    <a href="mailto:info@savautoservice.sk" style="color: #FFF100; text-decoration: none;">info@savautoservice.sk</a>
+  </p>
+    <!-- Новий блок: партнер -->
+  <p>
+    <i class="fab fa-instagram" style="color: red;"></i>
+    <a href="https://www.instagram.com/horetska_depil_bratislava/" target="_blank" style="color: #FFF100; text-decoration: none;">
+      "Nežnosť Depil Študio" — Náš partner
+    </a>
+  </p>
+
+  <!-- Соцмережі з рівними іконками в рядок -->
+  <div style="display: flex; gap: 15px; align-items: center; margin-top: 10px;">
+    <a href="https://wa.me/421952487875" target="_blank" style="color: #FFF100; font-size: 24px;">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="viber://chat?number=%2B421952487875" target="_blank" style="color: #FFF100; font-size: 24px;">
+      <i class="fab fa-viber"></i>
+    </a>
+    <a href="https://t.me/+421952487875" target="_blank" style="color: #FFF100; font-size: 24px;">
+      <i class="fab fa-telegram"></i>
+    </a>  
+      <a href="https://www.youtube.com/@SAV-service" target="_blank" style="color: #FFF100; font-size: 24px;">
+        <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://www.instagram.com/savautoservice.sk?igsh=MnJqb25yb2VmNWRr&utm_source=qr" target="_blank" style="color: #FFF100; font-size: 24px;">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 SAV Auto Service</p>
+  </footer>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Whatsapp як випадаючий -->
+  <a href="https://wa.me/421952487875" target="_blank" class="whatsapp-button" aria-label="Написати у WhatsApp">
+  <img src="image/whatsapp.svg" alt="WhatsApp" />
+</a>
+  <script src="app.js"></script>
+</body>
+</html>
+>>>>>>> cfe34ef (Перше завантаження сайту)
