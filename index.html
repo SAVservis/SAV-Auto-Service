@@ -329,9 +329,9 @@
 
 <style>
   #services {
-    width: 100vw; /* повна ширина вьюпорта */
-    padding: 20px 40px; /* відступи зверху/знизу і з боків */
-    box-sizing: border-box; /* щоб паддінги не виходили за межі */
+    width: 100vw;
+    padding: 20px 40px;
+    box-sizing: border-box;
   }
 
   #services > h2 {
@@ -342,11 +342,12 @@
   .services-columns {
     display: flex;
     gap: 40px;
-    justify-content: space-between; /* колонки рівномірно по ширині */
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .service-block {
-    flex: 1; /* обидва блоки займають порівну */
+    flex: 1;
     min-width: 300px;
   }
 
@@ -358,7 +359,24 @@
     list-style: disc inside;
     padding-left: 0;
   }
+
+  /* 🔽 Адаптація для екранів до 768px (планшети і мобільні) */
+  @media (max-width: 768px) {
+    .services-columns {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .service-block {
+      min-width: 100%;
+    }
+
+    #services {
+      padding: 20px;
+    }
+  }
 </style>
+
 
 <section id="services">
   <h2>Naše služby:</h2>
